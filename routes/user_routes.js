@@ -55,7 +55,7 @@ authRoutes.post("/app/signup", async (req, res) => {
 
  authRoutes.get('/tokenIsVaild',async (req,res)=>{
     try{
-       const token = req.body.token;
+       const token = req.headers['authorization'];
        if(!token){
          return res.status(400).json({msg : "Error In Token"});
        }
