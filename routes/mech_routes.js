@@ -57,7 +57,7 @@ mechRoutes.post("/mech/signup", async (req, res) => {
     }
  });
 
- mechRoutes.get('/mech/tokenIsVaild',async (req,res)=>{
+ mechRoutes.post('/mech/tokenIsVaild',async (req,res)=>{
     try{
        const token = req.body.token;
        if(!token){
