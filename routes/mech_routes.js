@@ -20,7 +20,6 @@ mechRoutes.post("/mech/signup", async (req, res) => {
         password: hashedPassword,
         name,
         isShop : false,
-        shopToken : null,
         isMech,
         isEmail : false,
       });

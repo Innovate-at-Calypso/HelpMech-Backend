@@ -26,9 +26,9 @@ const MechSchema = mongoose.Schema({
     },
     isMech : {
         type : Boolean,
-        default : false,
+        default : true,
     },
-    isEamil : {
+    isEmail : {
         type : Boolean,
         default : false,
     },
@@ -36,9 +36,6 @@ const MechSchema = mongoose.Schema({
         type: Boolean,
         default: false,
     },
-    shopToken : {
-        type : String,
-    }
 });
 
 const Mech = mongoose.model("mech-user",MechSchema);
