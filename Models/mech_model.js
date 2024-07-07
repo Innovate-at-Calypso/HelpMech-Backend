@@ -24,13 +24,18 @@ const MechSchema = mongoose.Schema({
         required: true,
         trim: true,
     },
+    isMech : {
+        type : Boolean,
+        default : true,
+    },
+    isEmail : {
+        type : Boolean,
+        default : false,
+    },
     isShop : {
         type: Boolean,
         default: false,
     },
-    shopToken : {
-        type : String,
-    }
 });
 
 const Mech = mongoose.model("mech-user",MechSchema);

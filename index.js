@@ -3,6 +3,8 @@ const mongoose  = require('mongoose');
 require('dotenv').config();
 const authRoutes = require('./routes/user_routes')
 const mechRoutes = require('./routes/mech_routes')
+const shopRoutes = require('./routes/shop_routes')
+const shopReview = require('./routes/reviws_routes')
 
 
 const app = express();
@@ -11,6 +13,8 @@ const DB = process.env.DB;
 app.use(express.json());
 app.use(authRoutes);
 app.use(mechRoutes);
+app.use(shopRoutes);
+app.use(shopReview);
 
 mongoose.connect(DB, {
     useNewUrlParser: true,

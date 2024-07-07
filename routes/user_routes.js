@@ -53,7 +53,7 @@ authRoutes.post("/app/signup", async (req, res) => {
     }
  });
 
- authRoutes.get('/tokenIsVaild',async (req,res)=>{
+ authRoutes.post('/tokenIsVaild',async (req,res)=>{
     try{
        const token = req.body.token;
        if(!token){
