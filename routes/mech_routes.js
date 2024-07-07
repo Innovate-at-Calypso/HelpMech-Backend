@@ -6,7 +6,7 @@ mechRoutes = express.Router();
 
 mechRoutes.post("/mech/signup", async (req, res) => {
     try {
-      const { name, email, password } = req.body;
+      const { name, email, password ,isMech } = req.body;
       const existingUser = await MechUser.findOne({ email });
   
       if (existingUser) {
@@ -19,6 +19,10 @@ mechRoutes.post("/mech/signup", async (req, res) => {
         email,
         password: hashedPassword,
         name,
+        isShop : false,
+        shopToken : null,
+        isMech,
+        isEmail : false,
       });
   
       mechUser = await mechUser.save();
