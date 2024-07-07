@@ -26,11 +26,11 @@ const MechSchema = mongoose.Schema({
     },
     isMech : {
         type : Boolean,
-        required : true,
+        default : false,
     },
     isEamil : {
         type : Boolean,
-        required : true,
+        default : false,
     },
     isShop : {
         type: Boolean,
